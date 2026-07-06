@@ -1,0 +1,52 @@
+platform,launch_month,ad_category_id,dev_cost,marketing_cost,users_reached,downloads_or_accesses,avg_bounce_rate,cumulative_feedback_from_customers,city_id
+PDF WhatsApp Push,2021-01,A001,236570.0,66060.0,23509,16319,0.5255,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C001
+PDF WhatsApp Push,2021-02,A001,156865.0,99122.0,19472,17017,0.8253,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C002
+PDF WhatsApp Push,2021-03,A001,242728.0,46087.0,8471,2891,0.6806,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C003
+PDF WhatsApp Push,2021-04,A001,147695.0,78868.0,46796,15640,0.6617000000000001,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C004
+PDF WhatsApp Push,2021-05,A001,325906.0,135644.0,16805,3231,0.769,"The site takes too long to load on average phones.
+People didn’t wait around.",C005
+PDF WhatsApp Push,2021-06,A001,248972.0,53225.0,35268,16551,0.45740000000000003,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C006
+PDF WhatsApp Push,2021-07,A001,197235.0,36643.0,13329,6091,0.8301000000000001,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C007
+PDF WhatsApp Push,2021-08,A001,188777.0,66727.0,39865,17866,0.7614,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C008
+PDF WhatsApp Push,2021-09,A001,99033.0,41005.0,33272,28073,0.4338,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C009
+PDF WhatsApp Push,2021-10,A001,221877.0,95697.0,47845,21517,0.7539,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C010
+PDF WhatsApp Push,2021-11,A001,246923.0,46029.0,11397,5278,0.6718000000000001,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C001
+PDF WhatsApp Push,2021-12,A001,106832.0,44226.0,37373,28240,0.4409,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C002
+E-paper Mobile Web,2021-01,A003,195725.0,93646.0,40525,23092,0.6292,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C003
+E-paper Mobile Web,2021-02,A003,225016.0,90603.0,29570,22651,0.6423000000000001,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C004
+E-paper Mobile Web,2021-03,A003,99873.0,58731.0,23284,7898,0.4829,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C005
+E-paper Mobile Web,2021-04,A003,120372.0,98926.0,23994,14217,0.8728,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C006
+E-paper Mobile Web,2021-05,A003,169464.0,35997.0,28284,9055,0.825,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C007
+E-paper Mobile Web,2021-06,A003,338339.0,82663.0,26785,4784,0.778,"Many said font was too tiny to read.
+Zooming didn’t help on small screens.",C008
+E-paper Mobile Web,2021-07,A003,226451.0,85506.0,22833,7708,0.7345,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C009
+E-paper Mobile Web,2021-08,A003,197322.0,79815.0,30122,25418,0.6311,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C010
+E-paper Mobile Web,2021-09,A003,247823.0,72092.0,10017,3841,0.6059,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C001
+E-paper Mobile Web,2021-10,A003,180082.0,92539.0,21370,13237,0.7254999999999999,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C002
+E-paper Mobile Web,2021-11,A003,85110.0,96077.0,34252,18724,0.6727,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C003
+E-paper Mobile Web,2021-12,A003,92087.0,51817.0,12999,6608,0.4311,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C004
+Mobile App Beta,2021-01,A002,234834.0,67861.0,27436,23043,0.6563,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C005
+Mobile App Beta,2021-02,A002,415324.0,120038.0,22251,7564,0.7709999999999999,"Many said font was too tiny to read.
+Zooming didn’t help on small screens.",C006
+Mobile App Beta,2021-03,A002,162617.0,43428.0,47963,15016,0.8031999999999999,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C007
+Mobile App Beta,2021-04,A002,180483.0,73934.0,7096,4954,0.6296,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C008
+Mobile App Beta,2021-05,A002,89596.0,40258.0,30279,26586,0.426,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C009
+Mobile App Beta,2021-06,A002,187539.0,87775.0,48363,30763,0.7931,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C010
+Mobile App Beta,2021-07,A002,98313.0,35469.0,31201,26898,0.5007,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C001
+Mobile App Beta,2021-08,A002,193175.0,58854.0,24715,8189,0.5293,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C002
+Mobile App Beta,2021-09,A002,194914.0,36256.0,34309,18913,0.4824,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C003
+Mobile App Beta,2021-10,A002,103705.0,63937.0,20078,9157,0.5650999999999999,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C004
+Mobile App Beta,2021-11,A002,153445.0,31651.0,10105,7462,0.7784,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C005
+Mobile App Beta,2021-12,A002,183892.0,80288.0,34312,30495,0.6597,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C006
+Responsive Web Version,2021-01,A004,82023.0,55051.0,7839,3558,0.5024000000000001,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C007
+Responsive Web Version,2021-02,A004,199654.0,57386.0,8384,5805,0.8389,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C008
+Responsive Web Version,2021-03,A004,160073.0,46184.0,48619,20364,0.8398,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C009
+Responsive Web Version,2021-04,A004,262756.0,167913.0,16821,5065,0.813,,C010
+Responsive Web Version,2021-05,A004,172197.0,63787.0,47821,30567,0.8353,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C001
+Responsive Web Version,2021-06,A004,144429.0,51621.0,18493,10695,0.5194,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C002
+Responsive Web Version,2021-07,A004,184195.0,89792.0,22069,19491,0.6256,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C003
+Responsive Web Version,2021-08,A004,113848.0,75253.0,12531,8334,0.8925,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C004
+Responsive Web Version,2021-09,A004,248876.0,64051.0,42051,21433,0.7859999999999999,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C005
+Responsive Web Version,2021-10,A004,226451.0,79811.0,12736,4692,0.41359999999999997,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C006
+Responsive Web Version,2021-11,A004,107766.0,60447.0,12710,4966,0.4326,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C007
+Responsive Web Version,2021-12,A004,148099.0,60254.0,6619,2880,0.632,"Mixed feedback: some usability concerns, but high interest in WhatsApp format.",C008
