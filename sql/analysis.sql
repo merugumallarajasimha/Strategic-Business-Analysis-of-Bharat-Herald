@@ -33,8 +33,6 @@ ORDER BY circulation_drop DESC
 LIMIT 3;
 
 
--- Business Request 2: Yearly Revenue Concentration by Category
--- Identify ad categories that contributed > 50% of total yearly ad revenue.
 WITH category_revenue AS
 (
     SELECT

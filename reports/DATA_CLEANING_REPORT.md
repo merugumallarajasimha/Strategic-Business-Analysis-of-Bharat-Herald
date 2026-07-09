@@ -38,14 +38,14 @@ During exploratory data analysis and database validation, several severe data qu
 
 ## 2. Implemented Data Cleaning Rules
 
-A dedicated cleaning script (`scripts/clean_data.py`) was implemented to process the raw datasets. The following rules were applied to resolve the anomalies:
+A dedicated cleaning pipeline ([run_pipeline.py](file:///c:/Users/merug/Desktop/Strategic%20Business%20Analysis%20of%20Bharat%20Herald/Strategic%20Business%20Analysis%20of%20Bharat%20Herald/scripts/run_pipeline.py)) was implemented to process the raw datasets. The following rules were applied to resolve the anomalies:
 
 | Table / Dataset | Column | Cleaning / Standardization Rule |
 | :--- | :--- | :--- |
-| **`fact_print_sales`** | `Copies Sold` | Stripped non-numeric formatting (e.g. `₹`) and cast to integer. |
+| **`fact_print_sales`** | `Copies Sold` | Stripped non-numeric formatting (e.g. `₹`) and cast to integer. Mapped to `net_circulation` (copies circulated to vendors), and added to `copies_returned` to calculate `copies_printed` (total printed run). |
 | **`fact_print_sales`** | `Language` | Stripped leading/trailing spaces and standardized to Title Case (`Hindi`, `English`). |
 | **`fact_print_sales`** | `State` | Standardized to Title Case and matched to unified names: `Uttar Pradesh`, `Madhya Pradesh`, `Delhi`, `Bihar`, `Rajasthan`, `Maharashtra`, `Jharkhand`, `Gujarat`. |
-| **`fact_print_sales`** | `Net_Circulation` | Re-calculated net circulation using the formula: `Copies Sold - copies_returned` to guarantee strict mathematical consistency. |
+| **`fact_print_sales`** | `Net_Circulation` | Stripped non-numeric formatting and mapped to `copies_sold` (copies actually sold to readers). |
 | **`dim_city`** | `state` | Standardized all uppercase and lowercase variations to Title Case. |
 | **`fact_ad_revenue`** | `quarter` | Unified all quarter strings to the standard `YYYY-Q#` format. |
 | **`fact_ad_revenue`** | `currency` | Unified `IN RUPEES` and `INR` to `INR`. Standardized currency codes to uppercase. |
@@ -57,17 +57,22 @@ A dedicated cleaning script (`scripts/clean_data.py`) was implemented to process
 
 ## 3. Cleaning Pipeline Architecture
 
-To prevent database contamination and preserve raw history, we introduced a two-stage pipeline:
+To guarantee auditability, prevent database contamination, and separate raw history from cleaned analytical assets, we implement a unified three-schema architecture inside the PostgreSQL database:
 
 ```mermaid
 graph TD
-    A[(Raw Datasets /Datasets)] --> B(clean_data.py)
-    B --> C[(Cleaned Datasets /Datasets_Cleaned)]
-    C --> D(ingest_data.py)
-    D --> E[(bharat_herald PostgreSQL Database)]
+    A[(Excel/CSV Files in /Datasets)] --> B(run_pipeline.py)
+    B -->|Ingest Raw Data| C[(raw schema)]
+    B -->|Clean & Ingest Data| D[(cleaned schema)]
+    B -->|Calculate & Run Queries| E[(analytics schema)]
+    E --> F[Strategic Report / Charts]
 ```
 
-1.  **Exploratory Stage (`scripts/clean_data.py`):** Reads files from the original `Datasets/` directory, runs the cleaning rules, and writes standardized versions of all datasets to `Datasets_Cleaned/`.
-2.  **Ingestion Stage (`scripts/ingest_data.py`):** Automatically triggers the cleaning script, drop-recreates database tables from `sql/schema.sql`, and copies cleaned files from `Datasets_Cleaned/` directly into the database.
+The consolidated pipeline script (`scripts/run_pipeline.py`) automates this workflow in a single execution:
+1. **Schema Initialization:** Runs `sql/schema.sql` to drop old tables and create/rebuild the `raw`, `cleaned`, and `analytics` schemas.
+2. **Raw Ingestion:** Loads uncleaned datasets directly from the `Datasets/` folder and copies them as-is into the `raw` schema.
+3. **Cleaning & Standardization:** Reads and cleans the raw dataframes in Python (casing, quarters, currency conversion to INR, net circulation logic, and deduplication) and populates the `cleaned` schema.
+4. **Analytics Query Engine:** Executes all analytical queries (defined in `sql/analysis_queries.sql`) against the `cleaned` schema and stores the result sets as tables under the `analytics` schema.
+5. **Reporting & Visualization:** Generates charts in `reports/images/` and compiles the final [STRATEGIC_REPORT.md](file:///c:/Users/merug/Desktop/Strategic%20Business%20Analysis%20of%20Bharat%20Herald/Strategic%20Business%20Analysis%20of%20Bharat%20Herald/reports/STRATEGIC_REPORT.md) by pulling data from the `analytics` schema.
 
 This architecture ensures that raw datasets remain intact for audit logs, while downstream analytics tables in PostgreSQL are guaranteed to be clean, typed, and consistent.

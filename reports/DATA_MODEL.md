@@ -6,42 +6,43 @@ This documentation provides the details needed to connect Power BI to the Postgr
 
 ## 1. Data Model Schema (Star Schema)
 
-The database `bharat_herald` is structured as a star schema consisting of two dimension tables and four fact tables.
+The database `bharat_herald` is structured as a star schema consisting of two dimension tables and four fact tables under the `cleaned` schema. The raw untransformed data is in the `raw` schema, and pre-calculated analytical results are in the `analytics` schema.
 
 ```mermaid
 erDiagram
-    dim_city ||--o{ fact_print_sales : "1:N (city_id)"
-    dim_city ||--o{ fact_ad_revenue : "1:N (city_id)"
-    dim_city ||--o{ fact_city_readiness : "1:N (city_id)"
-    dim_city ||--o{ fact_digital_pilot : "1:N (city_id)"
+    "cleaned.dim_city" ||--o{ "cleaned.fact_print_sales" : "1:N (city_id)"
+    "cleaned.dim_city" ||--o{ "cleaned.fact_ad_revenue" : "1:N (city_id)"
+    "cleaned.dim_city" ||--o{ "cleaned.fact_city_readiness" : "1:N (city_id)"
+    "cleaned.dim_city" ||--o{ "cleaned.fact_digital_pilot" : "1:N (city_id)"
     
-    dim_ad_category ||--o{ fact_ad_revenue : "1:N (ad_category_id)"
-    dim_ad_category ||--o{ fact_digital_pilot : "1:N (ad_category_id)"
+    "cleaned.dim_ad_category" ||--o{ "cleaned.fact_ad_revenue" : "1:N (ad_category_id)"
+    "cleaned.dim_ad_category" ||--o{ "cleaned.fact_digital_pilot" : "1:N (ad_category_id)"
 
-    dim_city {
+    "cleaned.dim_city" {
         varchar city_id PK
         varchar city
         varchar state
         varchar tier
     }
-    dim_ad_category {
+    "cleaned.dim_ad_category" {
         varchar ad_category_id PK
         varchar standard_ad_category
         varchar category_group
         varchar example_brands
     }
-    fact_print_sales {
+    "cleaned.fact_print_sales" {
         int id PK
         varchar edition_id
         varchar city_id FK
         varchar language
         varchar state
         date month
+        int copies_sold
         int copies_printed
         int copies_returned
         int net_circulation
     }
-    fact_ad_revenue {
+    "cleaned.fact_ad_revenue" {
         int id PK
         varchar edition_id
         varchar city_id FK
@@ -52,7 +53,7 @@ erDiagram
         numeric ad_revenue_in_inr
         text comments
     }
-    fact_city_readiness {
+    "cleaned.fact_city_readiness" {
         int id PK
         varchar city_id FK
         varchar quarter
@@ -60,7 +61,7 @@ erDiagram
         numeric smartphone_penetration
         numeric internet_penetration
     }
-    fact_digital_pilot {
+    "cleaned.fact_digital_pilot" {
         int id PK
         varchar platform
         varchar launch_month
@@ -129,6 +130,9 @@ Implement the following DAX measures in your Power BI file to calculate the key 
 ```dax
 // Total copies printed
 Total Copies Printed = SUM(fact_print_sales[copies_printed])
+
+// Total copies sold (gross before returns)
+Total Copies Sold (Gross) = SUM(fact_print_sales[copies_sold])
 
 // Total copies returned
 Total Copies Returned = SUM(fact_print_sales[copies_returned])
