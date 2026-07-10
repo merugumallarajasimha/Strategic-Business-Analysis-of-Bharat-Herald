@@ -69,13 +69,83 @@ This report provides the data-backed answers and strategic recommendations reque
 
 ## Business Request 5: Consistent Multi-Year Decline (2019-2024)
 
-*No records met the criteria. This indicates that no single city experienced a strict year-over-year decline in both print circulation and ad revenue every year from 2019 through 2024.*
+| city_name   |   year |   yearly_net_circulation |   yearly_ad_revenue | is_declining_print   | is_declining_ad_revenue   | is_declining_both   |
+|:------------|-------:|-------------------------:|--------------------:|:---------------------|:--------------------------|:--------------------|
+| Ahmedabad   |   2019 |                  3854315 |         3.66118e+07 | Yes                  | No                        | No                  |
+| Ahmedabad   |   2020 |                  3689816 |         3.72514e+07 | Yes                  | No                        | No                  |
+| Ahmedabad   |   2021 |                  3497163 |         3.18791e+07 | Yes                  | No                        | No                  |
+| Ahmedabad   |   2022 |                  3289743 |         4.29755e+07 | Yes                  | No                        | No                  |
+| Ahmedabad   |   2023 |                  3072281 |         3.09691e+07 | Yes                  | No                        | No                  |
+| Ahmedabad   |   2024 |                  2896757 |         3.49925e+07 | Yes                  | No                        | No                  |
+| Bhopal      |   2019 |                  3435648 |         3.79606e+07 | Yes                  | No                        | No                  |
+| Bhopal      |   2020 |                  3234746 |         3.25732e+07 | Yes                  | No                        | No                  |
+| Bhopal      |   2021 |                  3085087 |         3.80855e+07 | Yes                  | No                        | No                  |
+| Bhopal      |   2022 |                  2879673 |         4.2298e+07  | Yes                  | No                        | No                  |
+| Bhopal      |   2023 |                  2728868 |         3.88579e+07 | Yes                  | No                        | No                  |
+| Bhopal      |   2024 |                  2565086 |         3.67879e+07 | Yes                  | No                        | No                  |
+| Delhi       |   2019 |                  4608301 |         3.32335e+07 | Yes                  | No                        | No                  |
+| Delhi       |   2020 |                  4382689 |         3.3953e+07  | Yes                  | No                        | No                  |
+| Delhi       |   2021 |                  4132354 |         3.86169e+07 | Yes                  | No                        | No                  |
+| Delhi       |   2022 |                  3922226 |         4.25965e+07 | Yes                  | No                        | No                  |
+| Delhi       |   2023 |                  3667507 |         3.76719e+07 | Yes                  | No                        | No                  |
+| Delhi       |   2024 |                  3478045 |         2.57687e+07 | Yes                  | No                        | No                  |
+| Jaipur      |   2019 |                  5851986 |         3.61151e+07 | Yes                  | No                        | No                  |
+| Jaipur      |   2020 |                  5502710 |         3.49007e+07 | Yes                  | No                        | No                  |
+| Jaipur      |   2021 |                  5207315 |         3.93021e+07 | Yes                  | No                        | No                  |
+| Jaipur      |   2022 |                  4997351 |         2.92739e+07 | Yes                  | No                        | No                  |
+| Jaipur      |   2023 |                  4700977 |         3.69775e+07 | Yes                  | No                        | No                  |
+| Jaipur      |   2024 |                  4361397 |         4.06546e+07 | Yes                  | No                        | No                  |
+| Kanpur      |   2019 |                  4592671 |         3.38462e+07 | Yes                  | No                        | No                  |
+| Kanpur      |   2020 |                  4390616 |         2.67855e+07 | Yes                  | No                        | No                  |
+| Kanpur      |   2021 |                  4123020 |         3.30774e+07 | Yes                  | No                        | No                  |
+| Kanpur      |   2022 |                  3868919 |         3.48185e+07 | Yes                  | No                        | No                  |
+| Kanpur      |   2023 |                  3601836 |         3.61131e+07 | Yes                  | No                        | No                  |
+| Kanpur      |   2024 |                  3443849 |         3.11353e+07 | Yes                  | No                        | No                  |
+| Lucknow     |   2019 |                  2468730 |         3.69899e+07 | Yes                  | No                        | No                  |
+| Lucknow     |   2020 |                  2362712 |         3.282e+07   | Yes                  | No                        | No                  |
+| Lucknow     |   2021 |                  2246127 |         3.72075e+07 | Yes                  | No                        | No                  |
+| Lucknow     |   2022 |                  2111814 |         3.19685e+07 | Yes                  | No                        | No                  |
+| Lucknow     |   2023 |                  1985869 |         3.65934e+07 | Yes                  | No                        | No                  |
+| Lucknow     |   2024 |                  1866824 |         4.00103e+07 | Yes                  | No                        | No                  |
+| Mumbai      |   2019 |                  4999512 |         3.62262e+07 | Yes                  | No                        | No                  |
+| Mumbai      |   2020 |                  4833552 |         4.04221e+07 | Yes                  | No                        | No                  |
+| Mumbai      |   2021 |                  4539887 |         3.37821e+07 | Yes                  | No                        | No                  |
+| Mumbai      |   2022 |                  4207890 |         3.16656e+07 | Yes                  | No                        | No                  |
+| Mumbai      |   2023 |                  4010828 |         4.16845e+07 | Yes                  | No                        | No                  |
+| Mumbai      |   2024 |                  3775800 |         3.41443e+07 | Yes                  | No                        | No                  |
+| Patna       |   2019 |                  3206767 |         4.03508e+07 | Yes                  | No                        | No                  |
+| Patna       |   2020 |                  2990127 |         3.11162e+07 | Yes                  | No                        | No                  |
+| Patna       |   2021 |                  2870428 |         3.6151e+07  | Yes                  | No                        | No                  |
+| Patna       |   2022 |                  2685599 |         3.33641e+07 | Yes                  | No                        | No                  |
+| Patna       |   2023 |                  2533392 |         4.1869e+07  | Yes                  | No                        | No                  |
+| Patna       |   2024 |                  2379688 |         4.73378e+07 | Yes                  | No                        | No                  |
+| Ranchi      |   2019 |                  2934975 |         3.81029e+07 | Yes                  | No                        | No                  |
+| Ranchi      |   2020 |                  2847570 |         3.56377e+07 | Yes                  | No                        | No                  |
+| Ranchi      |   2021 |                  2688869 |         3.13497e+07 | Yes                  | No                        | No                  |
+| Ranchi      |   2022 |                  2502683 |         3.62834e+07 | Yes                  | No                        | No                  |
+| Ranchi      |   2023 |                  2367809 |         2.79779e+07 | Yes                  | No                        | No                  |
+| Ranchi      |   2024 |                  2200753 |         3.91629e+07 | Yes                  | No                        | No                  |
+| Varanasi    |   2019 |                  5895763 |         2.51227e+07 | Yes                  | No                        | No                  |
+| Varanasi    |   2020 |                  5485423 |         3.86648e+07 | Yes                  | No                        | No                  |
+| Varanasi    |   2021 |                  5111250 |         3.6154e+07  | Yes                  | No                        | No                  |
+| Varanasi    |   2022 |                  4929435 |         2.65122e+07 | Yes                  | No                        | No                  |
+| Varanasi    |   2023 |                  4693973 |         3.67281e+07 | Yes                  | No                        | No                  |
+| Varanasi    |   2024 |                  4357583 |         3.21184e+07 | Yes                  | No                        | No                  |
 
 ## Business Request 6: 2021 Readiness vs Pilot Engagement Outlier
 
 | city_name   |   readiness_score_2021 |   engagement_metric_2021 |   readiness_rank_desc |   engagement_rank_asc | is_outlier   |
 |:------------|-----------------------:|-------------------------:|----------------------:|----------------------:|:-------------|
-| Kanpur      |                  75.23 |                   0.4089 |                     1 |                     2 | Yes          |
+| Kanpur      |                  75.23 |                     0.41 |                     1 |                     2 | Yes          |
+| Varanasi    |                  73.89 |                     0.58 |                     2 |                     6 | No           |
+| Bhopal      |                  73.21 |                     0.6  |                     3 |                     7 | No           |
+| Lucknow     |                  73.2  |                     0.67 |                     4 |                    10 | No           |
+| Ahmedabad   |                  72.39 |                     0.61 |                     5 |                     8 | No           |
+| Patna       |                  70.77 |                     0.51 |                     6 |                     3 | No           |
+| Ranchi      |                  68.64 |                     0.35 |                     7 |                     1 | No           |
+| Mumbai      |                  68.33 |                     0.57 |                     8 |                     5 | No           |
+| Delhi       |                  56.08 |                     0.64 |                     9 |                     9 | No           |
+| Jaipur      |                  54.95 |                     0.53 |                    10 |                     4 | No           |
 
 ## Q1: Print Circulation Trends
 
