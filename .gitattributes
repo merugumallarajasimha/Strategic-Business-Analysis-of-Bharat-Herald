@@ -1,2 +1,11 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Force GitHub to prioritize SQL files
+*.sql linguist-detectable=true
+
+# Exclude raw data datasets so they don't skew the language bar
+Datasets/** linguist-vendored
+Datasets_Cleaned/** linguist-vendored
+*.csv linguist-vendored
+*.xlsx linguist-vendored
