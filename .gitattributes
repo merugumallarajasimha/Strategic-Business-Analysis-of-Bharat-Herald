@@ -1,11 +1,15 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-# Force GitHub to prioritize SQL files
+# Force GitHub to prioritize and detect SQL files
 *.sql linguist-detectable=true
 
-# Exclude raw data datasets so they don't skew the language bar
+# Exclude raw and cleaned datasets from language statistics
 Datasets/** linguist-vendored
 Datasets_Cleaned/** linguist-vendored
 *.csv linguist-vendored
 *.xlsx linguist-vendored
+
+# Explicitly mark Power BI binaries and templates as documentation/data to keep the code bar clean
+*.pbix linguist-documentation
+*.pbit linguist-documentation
