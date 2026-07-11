@@ -553,7 +553,7 @@ print_sales AS
 SELECT
     ar.city_name,
     ar.year,
-    ar.total_ad_revenue,
+    ROUND((ar.total_ad_revenue / 10000000.0)::NUMERIC, 2) AS total_ad_revenue_cr,
     ps.total_net_circulation,
     ROUND(
         (ar.total_ad_revenue / NULLIF(ps.total_net_circulation, 0))::NUMERIC,

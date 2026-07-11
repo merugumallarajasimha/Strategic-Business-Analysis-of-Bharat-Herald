@@ -229,9 +229,9 @@ def main():
     copies_returned = df_print_raw_data['copies_returned'].apply(clean_numeric_int)
     raw_net_circulation = df_print_raw_data['Net_Circulation'].apply(clean_numeric_int)
     
-    df_print_clean['copies_printed'] = raw_copies_sold + copies_returned
+    df_print_clean['copies_printed'] = raw_copies_sold
     df_print_clean['copies_returned'] = copies_returned
-    df_print_clean['net_circulation'] = raw_copies_sold
+    df_print_clean['net_circulation'] = raw_net_circulation
     df_print_clean['copies_sold'] = raw_net_circulation
 
     # Deduplicate key dimensions
@@ -791,7 +791,7 @@ def main():
             SELECT
                 ar.city_name,
                 ar.year,
-                ar.total_ad_revenue,
+                ROUND((ar.total_ad_revenue / 10000000.0)::NUMERIC, 2) AS total_ad_revenue_cr,
                 ps.total_net_circulation,
                 ROUND(
                     (ar.total_ad_revenue / NULLIF(ps.total_net_circulation, 0))::NUMERIC,
