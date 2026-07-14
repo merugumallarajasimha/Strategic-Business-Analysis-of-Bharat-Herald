@@ -1,4 +1,4 @@
-# 📊 Bharat Herald — Print-to-Digital Strategic Business Analysis
+# 📊 Bharat Herald  Print-to-Digital Strategic Business Analysis
 
 **End-to-end data analytics project**: ETL pipeline → PostgreSQL data warehouse → SQL analytics → Power BI dashboard, built to help a fictional regional news publisher decide where to launch its digital relaunch.
 
@@ -8,7 +8,7 @@
 
 Bharat Herald is a regional news publisher facing declining print circulation and volatile print ad revenue. The executive team needed a data-backed answer to one question:
 
-> **Which cities should we prioritize for a digital relaunch — and why?**
+> **Which cities should we prioritize for a digital relaunch  and why?**
 
 This project answers that using 6 years of print sales, ad revenue, and digital pilot data (2019–2024) across multiple Indian cities.
 
@@ -75,8 +75,8 @@ Full detail in [`DATA_CLEANING_REPORT.md`](./DATA_CLEANING_REPORT.md).
 - **Circulation**: Every city declined YoY from 2019–2024; total copies printed fell from 44.1M to 33.0M (**-25%** cumulative)
 - **Ad revenue mix shift**: Government-led revenue (2019–20) gave way to Real Estate as the top category from 2021 onward
 - **Efficiency ≠ size**: Smaller cities (Ranchi, Patna) post the highest print efficiency, not the biggest metros
-- **Kanpur is the standout opportunity**: highest digital readiness score but low pilot engagement — a market ready for digital but underserved by it
-- **ROI is rising in "declining" cities**: Patna and Lucknow show falling circulation but *rising* ad revenue per copy — still highly profitable per unit
+- **Kanpur is the standout opportunity**: highest digital readiness score but low pilot engagement —a market ready for digital but underserved by it
+- **ROI is rising in "declining" cities**: Patna and Lucknow show falling circulation but *rising* ad revenue per copy  still highly profitable per unit
 
 ## 📈 Digital Relaunch Priority Score
 
@@ -96,7 +96,6 @@ Priority Score = (Readiness × 0.4) + ((100 − Engagement Rate) × 0.3) + (Prin
 - **Python** (pandas, re, SQLAlchemy) — ETL and data cleaning
 - **PostgreSQL** — relational schema design, constraints, analytical SQL
 - **Power BI** — 5-page interactive dashboard, connected via Direct Query to the `analytics` schema and cleaned datasets
-- **Markdown** — final strategic report for stakeholders
 
 ---
 
