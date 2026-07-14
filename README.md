@@ -35,14 +35,14 @@ Excel / CSV files  →  Python ETL (pandas)  →  PostgreSQL (3-schema design)  
 
 Raw data had real-world messiness, handled programmatically in `run_pipeline.py`:
 
-- **Currency symbols in count fields** — stripped `₹` and commas from what should have been plain integers (`Copies Sold`)
-- **Inconsistent casing** — `English` / `ENGLISH` / `hindi` collapsed into standardized values
-- **Geographic naming chaos** — `Uttar-Pradesh`, `Madhya_Pradesh`, `maharashtra` etc. mapped to a single canonical state list
-- **Mixed currencies** — ad revenue reported in `USD`, `EUR`, `INR`, and `IN RUPEES`; converted to INR using fixed exchange rates
-- **Non-standard quarter formats** — `Q1-2019`, `4th Qtr 2020`, `2023-Q2` normalized to `YYYY-Q#`
-- **Bounce rate scale mismatch** — stored as `65.76` instead of `0.6576`; divided by 100 to satisfy schema constraints
-- **Swapped field logic** — some rows had `Copies Sold` and `Net Circulation` values reversed; corrected using the relationship `net_circulation = copies_printed − copies_returned`
-- **Deduplication** — removed duplicate rows violating primary key constraints before load
+- **Currency symbols in count fields** - stripped `₹` and commas from what should have been plain integers (`Copies Sold`)
+- **Inconsistent casing** - `English` / `ENGLISH` / `hindi` collapsed into standardized values
+- **Geographic naming chaos** - `Uttar-Pradesh`, `Madhya_Pradesh`, `maharashtra` etc. mapped to a single canonical state list
+- **Mixed currencies** - ad revenue reported in `USD`, `EUR`, `INR`, and `IN RUPEES`; converted to INR using fixed exchange rates
+- **Non-standard quarter formats** - `Q1-2019`, `4th Qtr 2020`, `2023-Q2` normalized to `YYYY-Q#`
+- **Bounce rate scale mismatch** - stored as `65.76` instead of `0.6576`; divided by 100 to satisfy schema constraints
+- **Swapped field logic** - some rows had `Copies Sold` and `Net Circulation` values reversed; corrected using the relationship `net_circulation = copies_printed − copies_returned`
+- **Deduplication** - removed duplicate rows violating primary key constraints before load
 
 Full detail in [`DATA_CLEANING_REPORT.md`](./DATA_CLEANING_REPORT.md).
 
@@ -93,9 +93,9 @@ Priority Score = (Readiness × 0.4) + ((100 − Engagement Rate) × 0.3) + (Prin
 
 ## 🛠️ Tech Stack
 
-- **Python** (pandas, re, SQLAlchemy) — ETL and data cleaning
-- **PostgreSQL** — relational schema design, constraints, analytical SQL
-- **Power BI** — 5-page interactive dashboard, connected via Direct Query to the `analytics` schema and cleaned datasets
+- **Python** (pandas, re, SQLAlchemy) - ETL and data cleaning
+- **PostgreSQL** - relational schema design, constraints, analytical SQL
+- **Power BI** - 5-page interactive dashboard, connected via Direct Query to the `analytics` schema and cleaned datasets
 
 ---
 
